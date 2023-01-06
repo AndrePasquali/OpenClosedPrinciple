@@ -6,13 +6,9 @@ namespace HeartAttackGames.OpenClosed
         {
             if (CanFire)
             {
-                
+                LoadedAmmo--;
+                Instantiate(BulletPrefab);
             }
-        }
-
-        public override void Reload()
-        {
-            throw new System.NotImplementedException();
         }
     }
 }

@@ -24,10 +24,22 @@ namespace HeartAttackGames.OpenClosed
             }
         }
 
-        protected bool CanReload => LoadedAmmo == 0 && ExtraAmmo > 0;
+        private bool _canReload => ExtraAmmo > 0;
 
         public abstract void Fire();
-
-        public abstract void Reload();
+        
+        protected virtual void Reload()
+        {
+            if (!_canReload) return;
+            
+            var ammoCapacity = WeaponSettings.AmmoCapacity;
+                
+            if (ExtraAmmo >= ammoCapacity)
+            {
+                ExtraAmmo -= ammoCapacity;
+                LoadedAmmo += ammoCapacity;
+            }
+            else LoadedAmmo += ExtraAmmo;
+        }
     }
 }
