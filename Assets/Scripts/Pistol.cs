@@ -1,6 +1,6 @@
 namespace HeartAttackGames.OpenClosed
 {
-    public class Pistol: Weapon
+    public sealed class Pistol: Weapon
     {
         public override void Fire()
         {
