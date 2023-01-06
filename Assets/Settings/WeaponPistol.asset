@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb6d4abbf444d9b8287f2bc706e0ef8, type: 3}
   m_Name: WeaponPistol
   m_EditorClassIdentifier: 
-  WeaponName: Shotgun
-  FireRate: 0.5
-  AmmoCapacity: 2
-  Damage: 25
+  WeaponName: Pistol
+  FireRate: 0.25
+  AmmoCapacity: 8
+  Damage: 10
   BulletPrefab: {fileID: 0}
