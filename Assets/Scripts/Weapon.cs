@@ -4,10 +4,10 @@ namespace HeartAttackGames.OpenClosed
 {
     public abstract class Weapon : MonoBehaviour
     {
-        [SerializeField] protected WeaponSettings WeaponSettings;
+        [SerializeField] private WeaponSettings WeaponSettings;
         [SerializeField] private float _nextFireTime;
-        [SerializeField] protected int LoadedAmmo;
-        [SerializeField] protected int ExtraAmmo;
+        private int LoadedAmmo;
+        private int ExtraAmmo;
 
         protected GameObject BulletPrefab => _bulletPrefab ?? (_bulletPrefab = WeaponSettings.BulletPrefab);
         private GameObject _bulletPrefab;
